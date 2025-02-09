@@ -8,7 +8,8 @@ export const callbacksComponent = (element) => {
 
     console.log('callbacksComponent');
 
-    const id = '5d86371f25a058e5b1c8a65e';
+    const id1 = '5d86371f25a058e5b1c8a65e';
+    const id2 = '5d86371f2343e37870b91ef1';
     findHeroe(id, (error, hero) => {
         // element.innerHTML = hero?.name || 'No hay heroe';
         if (error) {
