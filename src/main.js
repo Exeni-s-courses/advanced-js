@@ -27,5 +27,7 @@ const element = document.querySelector('.card');
 // environmentsComponent(element);
 // callbacksComponent( element )
 // promiseComponent( element )
-promiseRaceComponent( element )
+// promiseRaceComponent( element )
+asyncComponent( element )
+
 
