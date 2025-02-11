@@ -3,16 +3,16 @@ import { heroes } from '../data/heroes'
  * 
  * @param {HTMLDivElement} element 
  */
-export const asyncComponent = (element) => {
+export const asyncAwaitComponent = async (element) => {
 
-    const id = '5d86371fd55e2e2a30fe1cc3';
+    const id1 = '5d86371fd55e2e2a30fe1cc3';
+    const id2 = '5d86371fd55e2e2a30fe1cc4';
 
-    console.log('Inicio del componente');
+    const {name: name1} = await findHero(id1);
+    const {name: name2} = await findHero(id2);
 
-    // findHero(id).then(console.log).catch(element.innerHTML)
-    findHero(id).then(name => element.innerHTML = name).catch(error => element.innerHTML = error)
+    element.innerHTML = `${name1} / ${name2}`;
 
-    console.log('Fin del componente');
 }
 
 
