@@ -6,16 +6,16 @@ import { heroes } from '../data/heroes'
 export const asyncComponent = (element) => {
 
     const id = '5d86371fd55e2e2a30fe1cc3';
-    findHero(id);
+    findHero(id).then(element.innerHTML).catch(element.innerHTML)
 }
 
 
 /**
  * 
  * @param {String} id 
- * @returns 
+ * @returns {Promise<String>}
  */
-const findHero = (id) => {
+const findHero = async (id) => {
     const hero = heroes.find(hero => hero.id === id);
-    return hero;
+    return hero.name;
 }
